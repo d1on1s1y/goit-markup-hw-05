@@ -19,7 +19,7 @@
       rel="stylesheet"
     />
   </head>
-  <body>
+  <body data-page>
     <header class="header">
       <div class="container header-container">
         <!--Логотип-->
@@ -67,7 +67,9 @@
         <div class="container">
           <!--заголовок-->
           <h1 class="hero-header">Эффективные решения для вашего бизнеса</h1>
-          <button type="button" class="hero-btn">Заказать услугу</button>
+          <button type="button" class="hero-btn" data-modal-open>
+            Заказать услугу
+          </button>
         </div>
       </section>
       <!--преимущества-->
@@ -446,5 +448,15 @@
         </div>
       </div>
     </footer>
+    <div class="backdrop is-hidden" data-modal>
+      <div class="modal">
+        <button class="modal-btn" data-modal-close>
+          <svg class="modal-icon" width="17" height="17">
+            <use href="./images/icons.svg#icon-close"></use>
+          </svg>
+        </button>
+      </div>
+    </div>
+    <script src="./js/modal.js"></script>
   </body>
 </html>
