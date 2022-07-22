@@ -169,13 +169,28 @@ body {
   font-size: 14px;
   line-height: calc(16 / 14);
   letter-spacing: 0.02em;
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .nav-link:focus,
 .nav-link:hover {
   color: var(--animation-color);
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .active-nav-link {
+  position: relative;
   color: var(--animation-color);
+  padding-top: 32px;
+  padding-bottom: 32px;
+}
+.active-nav-link::after {
+  position: absolute;
+  left: 0;
+  bottom: 1px;
+  width: 100%;
+  height: 4px;
+  content: "";
+  background-color: var(--animation-color);
+  border-radius: 2px;
 }
 .contact-link {
   display: flex;
@@ -184,10 +199,12 @@ body {
   font-size: 14px;
   line-height: calc(16 / 14);
   letter-spacing: 0.02em;
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .contact-link:hover,
 .contact-link:focus {
   color: var(--animation-color);
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .idea-text {
   font-size: 14px;
@@ -222,10 +239,12 @@ body {
 }
 .address-link {
   color: rgba(255, 255, 255, 0.6);
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .address-link:focus,
 .address-link:hover {
   color: var(--animation-color);
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .address-list {
   font-style: normal;
@@ -256,6 +275,7 @@ body {
   cursor: pointer;
   padding: 6px 22px;
   margin-right: 8px;
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .portfolio-btn:hover,
@@ -333,6 +353,7 @@ body {
 }
 .portfolio-card {
   margin-bottom: 30px;
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .portfolio-card-text {
   padding-left: 24px;
@@ -392,16 +413,20 @@ body {
   fill: #afb1b8;
   width: 20px;
   height: 20px;
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .social-link:focus,
 .social-link:hover {
   background-color: var(--animation-color);
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .social-link:focus .social-icon {
   fill: var(--main-header-color);
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .social-link:hover .social-icon {
   fill: var(--main-header-color);
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .socials {
   margin-top: 16px;
@@ -417,6 +442,7 @@ body {
   height: 44px;
   border-radius: 50%;
   background-color: #fff;
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .footer-social-header {
   font-weight: 700;
@@ -447,10 +473,12 @@ body {
   height: 44px;
   border-radius: 50%;
   background-color: rgba(255, 255, 255, 0.1);
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .footer-social-link:focus,
 .footer-social-link:hover {
   background-color: var(--animation-color);
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .social-section {
   margin-left: 70px;
@@ -469,19 +497,24 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .client-icon {
   fill: #afb1b8;
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .client-list-item:focus,
 .client-list-item:hover {
   border: 1px solid var(--animation-color);
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .client-list-item:focus .client-icon {
   fill: var(--animation-color);
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .client-list-item:hover .client-icon {
   fill: var(--animation-color);
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .client-section {
   padding-bottom: 94px;
@@ -494,6 +527,7 @@ body {
 .portfolio-card:hover {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .backdrop {
   display: flex;
@@ -532,4 +566,64 @@ body {
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
+}
+
+.service-card {
+  position: relative;
+}
+.service-card > .service-text {
+  padding-top: 27px;
+  padding-bottom: 27px;
+  padding-left: 82px;
+  padding-right: 83px;
+  width: 370px;
+  height: 70px;
+
+  font-weight: 700;
+  font-size: 14px;
+  line-height: calc(16 / 14);
+  text-align: center;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+
+  color: #ffffff;
+  background-color: rgba(47, 48, 58, 0.8);
+  position: absolute;
+  bottom: 0;
+  z-index: 1;
+}
+
+.portfolio-img-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+
+  display: flex;
+  align-items: center;
+  padding: 24px;
+
+  background: rgb(33 150 243 / 0.9);
+  transform: translateY(100%);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.portfolio-card:hover .portfolio-img-overlay {
+  transform: translateY(0);
+}
+.portfolio-text-overlay {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 156%;
+
+  letter-spacing: 0.03em;
+
+  color: #ffffff;
+}
+.portfolio-thumb {
+  position: relative;
+  overflow: hidden;
 }
